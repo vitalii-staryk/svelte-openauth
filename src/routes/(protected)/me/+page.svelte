@@ -1,19 +1,22 @@
 <script lang="ts">
   import {onMount} from "svelte";
+	import { host } from "../../../api/auth/auth";
 
   let res = '';
   let manualRes = '';
 
   onMount(() => {
-    fetch('https://test-servre-open-auth-production.up.railway.app/protect', { credentials: 'include' })
+    fetch(`${host}/protect`, { credentials: 'include' })
       .then((resp) => resp.json().then(json => {
         res = JSON.stringify(json);
       }))
   })
 
   async function fetchManual() {
-    const resp = await fetch('https://test-servre-open-auth-production.up.railway.app/protect', { credentials: 'include' });
-    manualRes = JSON.stringify(await resp.json());
+    const resp = await fetch(`${host}/protect`, { credentials: 'include' });
+    
+    manualRes = (await resp.json()).message;
+
   }
 </script>
 

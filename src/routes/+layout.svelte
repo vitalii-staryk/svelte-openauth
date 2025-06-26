@@ -1,11 +1,12 @@
 <script lang="ts">
   import {goto} from "$app/navigation";
   import {browser} from "$app/environment";
+	import { host } from "../api/auth/auth";
 
   const checkJwt = async () => {
   let success = false;
   try {
-    const resp = await fetch('https://test-servre-open-auth-production.up.railway.app/protect', { credentials: 'include' });
+    const resp = await fetch(`${host}/protect`, { credentials: 'include' });
     if (resp.ok) success = true;
   } catch {}
 
