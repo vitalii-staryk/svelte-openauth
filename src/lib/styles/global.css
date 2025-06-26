@@ -1,0 +1,83 @@
+*,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+  color: #21272e;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #21272e;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 980px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hljs {
+  border: 1px solid rgba(33, 39, 46, 0.1215686275) !important;
+  border-radius: 6px !important;
+  background: rgba(240, 241, 242, 0.2705882353) !important;
+}
+
+.qr-container svg {
+  width: 100%;
+}
+
+.enter-animation {
+  animation: enter 0.15s both;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale3d(0.95, 0.95, 0.95) rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
