@@ -4,7 +4,7 @@
 
   const checkJwt = () => {
     let success = false
-    fetch('https://test-servre-open-auth-production.up.railway.app/protect').then(() => success = true)
+    fetch('https://test-servre-open-auth-production.up.railway.app/protect', { credentials: 'include' }).then(() => { success = true; });
 
     if (!success) {
       goto('/', {
