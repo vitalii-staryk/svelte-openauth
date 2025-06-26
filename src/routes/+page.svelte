@@ -13,7 +13,7 @@
     const { challenge, url } = await authClient.authorize(
       redirectUri,
       "code",
-      { pkce: true }
+      // { pkce: true }
     );
     sessionStorage.setItem("pkce_challenge", JSON.stringify(challenge));
     window.location.href = url;
